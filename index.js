@@ -22,7 +22,9 @@ function calculateAge(){
     day2=currentDay-day
 
     if(input.value===''){
-        alert('Please')
+        resultSection.textContent='Fill input!'
+        resultSection.style.fontSize="30px"
+        resultSection.classList.add('inputCaution')
         return
     }else if(month2<0){
         age--
@@ -30,4 +32,5 @@ function calculateAge(){
     }
     
   resultSection.textContent=`You are ${age} years,${month2} months and ${day2} days old`    
+  input.value=''
 }
